@@ -31,8 +31,14 @@ const Footer: React.FC = () => {
 
               {/* Contact info premium */}
               <div className="space-y-4">
-                <a href="mailto:luis.somarriba.r@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-iter-primary transition-colors group">
+                <a href="mailto:sales@iterge.com" className="flex items-center gap-3 text-gray-300 hover:text-iter-primary transition-colors group">
                   <div className="w-8 h-8 bg-iter-primary/20 rounded-lg flex items-center justify-center group-hover:bg-iter-primary/30 transition-colors">
+                    💼
+                  </div>
+                  <span>sales@iterge.com</span>
+                </a>
+                <a href="mailto:luis.somarriba.r@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-iter-secondary transition-colors group">
+                  <div className="w-8 h-8 bg-iter-secondary/20 rounded-lg flex items-center justify-center group-hover:bg-iter-secondary/30 transition-colors">
                     ✉️
                   </div>
                   <span>luis.somarriba.r@gmail.com</span>
@@ -193,8 +199,16 @@ const Footer: React.FC = () => {
               © 2024 <span className="text-iter-primary font-semibold">ITER</span> - Gestión Energética. 
               Todos los derechos reservados.
             </div>
-            <div className="text-gray-400 text-sm text-center md:text-right">
-              Desarrollado con <span className="text-iter-gold">⚡</span> para la eficiencia energética
+            <div className="flex items-center gap-3 text-gray-400 text-sm">
+              <span>Diseñado por</span>
+              <a href="#" className="flex items-center gap-2 hover:text-iter-primary transition-colors group">
+                <img 
+                  src="/sinsajo-logo.png" 
+                  alt="Sinsajo Creators" 
+                  className="w-6 h-6 rounded-lg group-hover:scale-110 transition-transform"
+                />
+                <span className="font-semibold">Sinsajo Creators</span>
+              </a>
             </div>
           </div>
         </div>

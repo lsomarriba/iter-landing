@@ -7,8 +7,15 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-premium-gradient">
       {/* Elementos de fondo decorativos */}
       <div className="absolute inset-0">
+        {/* Imagen de fondo con overlay */}
+        <img 
+          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Solar panels and renewable energy infrastructure"
+          className="w-full h-full object-cover opacity-10"
+        />
+        
         {/* Gradiente principal */}
-        <div className="absolute inset-0 bg-gradient-to-br from-iter-dark via-iter-charcoal to-iter-dark"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-iter-dark/95 via-iter-charcoal/90 to-iter-dark/95"></div>
         
         {/* Efectos de luz */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-iter-primary/10 rounded-full blur-3xl animate-float"></div>

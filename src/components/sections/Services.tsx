@@ -70,29 +70,49 @@ const Services: React.FC = () => {
       id: 'pv-audit',
       icon: '🔍',
       title: 'Auditorías de Sistemas Fotovoltaicos',
-      subtitle: 'Optimización de Instalaciones Existentes',
-      description: 'Maximiza el rendimiento de tu planta solar existente. Identificamos pérdidas, fallas y oportunidades de mejora para recuperar hasta 25% de producción perdida.',
-      detailedExplanation: 'Evaluación técnica integral de sistemas fotovoltaicos en operación para identificar deficiencias, optimizar el rendimiento y extender la vida útil de la instalación.',
+      subtitle: 'Optimización en Todas las Fases del Proyecto',
+      description: 'Auditorías especializadas en diseño, ejecución y operación. Garantizamos máximo rendimiento y ROI en cada etapa de tu proyecto fotovoltaico.',
+      detailedExplanation: 'Evaluaciones técnicas integrales adaptadas a cada fase: revisión de diseños antes de construir, supervisión durante instalación, y optimización de sistemas en operación.',
       features: [
         {
-          title: 'Análisis de Rendimiento vs. Diseño',
-          description: 'Comparación de producción real vs. teórica, identificación de desviaciones'
+          title: 'Auditoría en Fase de Diseño',
+          description: 'Validación técnica del proyecto antes de construcción. Optimización de layouts, selección de equipos y análisis de viabilidad'
         },
         {
-          title: 'Inspección Técnica Especializada',
-          description: 'Termografía, mediciones eléctricas, revisión de conexiones y componentes'
+          title: 'Auditoría Durante Ejecución',
+          description: 'Supervisión de instalación, control de calidad, verificación de especificaciones y pruebas de funcionamiento'
         },
         {
-          title: 'Diagnóstico de Fallas y Pérdidas',
-          description: 'Identificación de módulos defectuosos, sombreados, suciedad y degradación'
+          title: 'Auditoría en Operación',
+          description: 'Análisis de rendimiento, identificación de fallas, termografía y plan de mantenimiento preventivo'
         },
         {
-          title: 'Plan de Optimización',
-          description: 'Recomendaciones técnicas y económicas para maximizar la producción'
+          title: 'Reportes y Recomendaciones',
+          description: 'Informes detallados con hallazgos, recomendaciones técnicas y plan de acción para maximizar producción'
         }
       ],
-      benefits: ['Recuperar hasta 25% producción', 'Extender vida útil', 'Reducir costos O&M', 'Reportes detallados'],
-      timeline: '2-4 semanas',
+      phasesBenefits: {
+        design: [
+          'Evitar errores costosos (ahorro hasta $50,000)',
+          'Optimizar diseño (+15% producción)',
+          'Validar ROI antes de invertir',
+          'Cumplimiento normativo garantizado'
+        ],
+        execution: [
+          'Control calidad 100% componentes',
+          'Instalación conforme especificaciones',
+          'Prevenir problemas futuros',
+          'Garantía técnica respaldada'
+        ],
+        operation: [
+          'Recuperar hasta 25% producción perdida',
+          'Extender vida útil +5 años',
+          'Reducir costos O&M 30%',
+          'Maximizar rentabilidad'
+        ]
+      },
+      benefits: ['Auditorías en 3 fases críticas', 'ROI optimizado garantizado', 'Prevención vs. corrección', 'Informes técnicos certificados'],
+      timeline: '1-4 semanas (según fase)',
       investment: 'Desde $0.05/Watt',
       color: 'from-iter-secondary to-iter-accent',
       borderColor: 'border-iter-secondary',
@@ -130,7 +150,35 @@ const Services: React.FC = () => {
             <div key={service.id} className={`group ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className="lg:flex gap-12 items-start">
                 {/* Tarjeta del servicio */}
-                <div className={`lg:w-1/2 bg-white rounded-3xl p-10 shadow-premium hover:shadow-premium-lg transition-all duration-500 border-2 ${service.borderColor} group-hover:scale-105`}>
+                <div className={`lg:w-1/2 bg-white rounded-3xl p-10 shadow-premium hover:shadow-premium-lg transition-all duration-500 border-2 ${service.borderColor} group-hover:scale-105 relative overflow-hidden`}>
+                  {/* Imagen de fondo específica por servicio */}
+                  {service.id === 'iso-50001' && (
+                    <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Industrial facility"
+                        className="w-full h-full object-cover rounded-bl-3xl"
+                      />
+                    </div>
+                  )}
+                  {service.id === 'pv-design' && (
+                    <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Solar panel installation"
+                        className="w-full h-full object-cover rounded-bl-3xl"
+                      />
+                    </div>
+                  )}
+                  {service.id === 'pv-audit' && (
+                    <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Solar panel inspection"
+                        className="w-full h-full object-cover rounded-bl-3xl"
+                      />
+                    </div>
+                  )}
                   {/* Header del servicio */}
                   <div className="space-y-6">
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform`}>
@@ -211,6 +259,76 @@ const Services: React.FC = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Beneficios por fases (solo para auditorías) */}
+                  {service.phasesBenefits && (
+                    <div className="bg-gradient-to-br from-iter-secondary/10 to-iter-primary/10 rounded-2xl p-8 border border-iter-secondary/20 mb-6">
+                      <h4 className="text-xl font-bold text-iter-dark mb-6">
+                        Beneficios por Fase del Proyecto
+                      </h4>
+                      <div className="space-y-6">
+                        <div>
+                          <h5 className="font-bold text-iter-secondary mb-3 flex items-center gap-2">
+                            📐 Fase de Diseño
+                          </h5>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {service.phasesBenefits.design.map((benefit, idx) => (
+                              <div key={idx} className="flex items-center gap-2">
+                                <span className="text-iter-secondary">•</span>
+                                <span className="text-sm text-iter-dark">{benefit}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-bold text-iter-gold mb-3 flex items-center gap-2">
+                            🔧 Fase de Ejecución
+                          </h5>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {service.phasesBenefits.execution.map((benefit, idx) => (
+                              <div key={idx} className="flex items-center gap-2">
+                                <span className="text-iter-gold">•</span>
+                                <span className="text-sm text-iter-dark">{benefit}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-bold text-iter-primary mb-3 flex items-center gap-2">
+                            ⚡ Fase de Operación
+                          </h5>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {service.phasesBenefits.operation.map((benefit, idx) => (
+                              <div key={idx} className="flex items-center gap-2">
+                                <span className="text-iter-primary">•</span>
+                                <span className="text-sm text-iter-dark">{benefit}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* CTA especial para auditorías */}
+                      <div className="mt-6 p-4 bg-white/80 rounded-xl border border-iter-secondary/30">
+                        <p className="text-center text-sm font-semibold text-iter-dark mb-3">
+                          💡 <span className="text-iter-secondary">¿En qué fase está tu proyecto?</span>
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          <a href="#contact" className="px-4 py-2 bg-iter-secondary/20 text-iter-secondary hover:bg-iter-secondary hover:text-white rounded-lg text-xs font-medium transition-colors">
+                            Pre-Diseño
+                          </a>
+                          <a href="#contact" className="px-4 py-2 bg-iter-gold/20 text-iter-gold hover:bg-iter-gold hover:text-white rounded-lg text-xs font-medium transition-colors">
+                            En Construcción
+                          </a>
+                          <a href="#contact" className="px-4 py-2 bg-iter-primary/20 text-iter-primary hover:bg-iter-primary hover:text-white rounded-lg text-xs font-medium transition-colors">
+                            En Operación
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Beneficios clave */}
                   <div className="bg-gradient-to-br from-iter-primary/10 to-iter-gold/10 rounded-2xl p-8 border border-iter-primary/20">

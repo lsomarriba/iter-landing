@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          to: 'luis.somarriba.r@gmail.com',
+          to: ['sales@iterge.com', 'luis.somarriba.r@gmail.com'],
           subject: `Nueva consulta de ${formData.name} - ${formData.service}`,
         }),
       })
@@ -282,13 +282,23 @@ const Contact: React.FC = () => {
               </h3>
               
               <div className="space-y-6">
-                <a href="mailto:luis.somarriba.r@gmail.com" className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
+                <a href="mailto:sales@iterge.com" className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
                   <div className="w-14 h-14 bg-gradient-to-r from-iter-primary to-iter-secondary rounded-2xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+                    💼
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Email Comercial</h4>
+                    <p className="text-iter-primary">sales@iterge.com</p>
+                  </div>
+                </a>
+
+                <a href="mailto:luis.somarriba.r@gmail.com" className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
+                  <div className="w-14 h-14 bg-gradient-to-r from-iter-secondary to-iter-accent rounded-2xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
                     ✉️
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-lg">Email</h4>
-                    <p className="text-iter-primary">luis.somarriba.r@gmail.com</p>
+                    <h4 className="font-bold text-white text-lg">Email Directo</h4>
+                    <p className="text-iter-secondary">luis.somarriba.r@gmail.com</p>
                   </div>
                 </a>
 
