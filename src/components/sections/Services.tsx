@@ -61,7 +61,7 @@ const Services: React.FC = () => {
       ],
       benefits: ['ROI 3-5 años', 'Vida útil +25 años', 'Mantenimiento mínimo', 'Incentivos fiscales'],
       timeline: '4-8 meses',
-      investment: 'Desde $0.80/Watt',
+      investment: 'Cotización personalizada',
       color: 'from-iter-gold to-yellow-500',
       borderColor: 'border-iter-gold',
       ctaText: 'Cotizar Sistema Solar'
@@ -310,21 +310,144 @@ const Services: React.FC = () => {
                         </div>
                       </div>
                       
-                      {/* CTA especial para auditorías */}
-                      <div className="mt-6 p-4 bg-white/80 rounded-xl border border-iter-secondary/30">
-                        <p className="text-center text-sm font-semibold text-iter-dark mb-3">
-                          💡 <span className="text-iter-secondary">¿En qué fase está tu proyecto?</span>
-                        </p>
-                        <div className="flex flex-wrap gap-2 justify-center">
-                          <a href="#contact" className="px-4 py-2 bg-iter-secondary/20 text-iter-secondary hover:bg-iter-secondary hover:text-white rounded-lg text-xs font-medium transition-colors">
-                            Pre-Diseño
-                          </a>
-                          <a href="#contact" className="px-4 py-2 bg-iter-gold/20 text-iter-gold hover:bg-iter-gold hover:text-white rounded-lg text-xs font-medium transition-colors">
-                            En Construcción
-                          </a>
-                          <a href="#contact" className="px-4 py-2 bg-iter-primary/20 text-iter-primary hover:bg-iter-primary hover:text-white rounded-lg text-xs font-medium transition-colors">
-                            En Operación
-                          </a>
+                      {/* Smart Interactive Phase Selector */}
+                      <div className="mt-6 p-8 bg-gradient-to-br from-white/90 to-iter-secondary/5 rounded-2xl border-2 border-iter-secondary/20 backdrop-blur-sm">
+                        <div className="text-center mb-8">
+                          <div className="inline-flex items-center gap-2 px-4 py-2 bg-iter-secondary/10 rounded-full text-iter-secondary font-bold text-sm mb-4">
+                            💡 Smart Selector
+                          </div>
+                          <h4 className="text-2xl font-bold text-iter-dark mb-2">
+                            ¿En qué <span className="text-iter-secondary">fase</span> está tu proyecto?
+                          </h4>
+                          <p className="text-gray-600 text-sm">
+                            Descubre cómo podemos ayudarte específicamente en tu etapa actual
+                          </p>
+                        </div>
+
+                        {/* Interactive Timeline Phases */}
+                        <div className="relative">
+                          {/* Progress Line */}
+                          <div className="absolute top-1/2 left-4 right-4 h-1 bg-gradient-to-r from-iter-secondary via-iter-gold to-iter-primary rounded-full transform -translate-y-1/2 opacity-20"></div>
+                          <div className="absolute top-1/2 left-4 right-4 h-1 bg-gradient-to-r from-iter-secondary via-iter-gold to-iter-primary rounded-full transform -translate-y-1/2 opacity-60 animate-pulse"></div>
+
+                          <div className="grid grid-cols-3 gap-4 relative z-10">
+                            {/* Fase 1: Pre-Diseño */}
+                            <div className="group cursor-pointer">
+                              <a href="#contact" className="block">
+                                <div className="bg-white rounded-2xl p-6 border-2 border-iter-secondary/20 hover:border-iter-secondary hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                                  {/* Animated background effect */}
+                                  <div className="absolute inset-0 bg-gradient-to-br from-iter-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                  
+                                  {/* Phase indicator */}
+                                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-iter-secondary rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white">
+                                    1
+                                  </div>
+
+                                  <div className="relative z-10 text-center">
+                                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-iter-secondary to-iter-secondary/80 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform">
+                                      📐
+                                    </div>
+                                    <h5 className="font-bold text-iter-secondary mb-2">Pre-Diseño</h5>
+                                    <p className="text-xs text-gray-600 mb-3">Validación y optimización antes de construir</p>
+                                    
+                                    {/* Benefits preview */}
+                                    <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="text-xs text-iter-secondary font-medium">• Evitar errores costosos</div>
+                                      <div className="text-xs text-iter-secondary font-medium">• +15% optimización</div>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="px-3 py-2 bg-iter-secondary text-white text-xs font-bold rounded-lg hover:bg-iter-secondary/90 transition-colors">
+                                        Evaluar Proyecto
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+
+                            {/* Fase 2: En Construcción */}
+                            <div className="group cursor-pointer">
+                              <a href="#contact" className="block">
+                                <div className="bg-white rounded-2xl p-6 border-2 border-iter-gold/20 hover:border-iter-gold hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                                  {/* Animated background effect */}
+                                  <div className="absolute inset-0 bg-gradient-to-br from-iter-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                  
+                                  {/* Phase indicator */}
+                                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-iter-gold rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white">
+                                    2
+                                  </div>
+
+                                  <div className="relative z-10 text-center">
+                                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-iter-gold to-yellow-500 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform">
+                                      🔧
+                                    </div>
+                                    <h5 className="font-bold text-iter-gold mb-2">En Construcción</h5>
+                                    <p className="text-xs text-gray-600 mb-3">Supervisión y control de calidad durante instalación</p>
+                                    
+                                    {/* Benefits preview */}
+                                    <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="text-xs text-iter-gold font-medium">• Control calidad 100%</div>
+                                      <div className="text-xs text-iter-gold font-medium">• Prevenir problemas</div>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="px-3 py-2 bg-iter-gold text-white text-xs font-bold rounded-lg hover:bg-yellow-600 transition-colors">
+                                        Supervisar Obra
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+
+                            {/* Fase 3: En Operación */}
+                            <div className="group cursor-pointer">
+                              <a href="#contact" className="block">
+                                <div className="bg-white rounded-2xl p-6 border-2 border-iter-primary/20 hover:border-iter-primary hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                                  {/* Animated background effect */}
+                                  <div className="absolute inset-0 bg-gradient-to-br from-iter-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                  
+                                  {/* Phase indicator */}
+                                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-iter-primary rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white">
+                                    3
+                                  </div>
+
+                                  <div className="relative z-10 text-center">
+                                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-iter-primary to-iter-secondary rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform">
+                                      ⚡
+                                    </div>
+                                    <h5 className="font-bold text-iter-primary mb-2">En Operación</h5>
+                                    <p className="text-xs text-gray-600 mb-3">Optimización y maximización del rendimiento</p>
+                                    
+                                    {/* Benefits preview */}
+                                    <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="text-xs text-iter-primary font-medium">• +25% producción</div>
+                                      <div className="text-xs text-iter-primary font-medium">• +5 años vida útil</div>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      <div className="px-3 py-2 bg-iter-primary text-white text-xs font-bold rounded-lg hover:bg-iter-primary/90 transition-colors">
+                                        Optimizar Sistema
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Bottom CTA */}
+                        <div className="mt-8 text-center">
+                          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-iter-secondary/10 via-iter-gold/10 to-iter-primary/10 rounded-full text-iter-dark text-xs font-medium border border-gray-200">
+                            <span className="animate-pulse">✨</span>
+                            <span>Cada fase tiene beneficios únicos - ¡Descubre el tuyo!</span>
+                            <span className="animate-pulse">✨</span>
+                          </div>
                         </div>
                       </div>
                     </div>
