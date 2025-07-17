@@ -112,18 +112,12 @@ const Process: React.FC = () => {
               Nuestro equipo de expertos está preparado para evaluar tu caso y desarrollar una solución personalizada
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-iter-green hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <a href="#contact" className="bg-iter-green hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
                 🚀 Iniciar Proyecto
-              </button>
-              <button 
-                className="border-2 border-iter-green text-iter-green hover:bg-iter-green hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              </a>
+              <a href="#services" className="border-2 border-iter-green text-iter-green hover:bg-iter-green hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 📋 Ver Más Detalles
-              </button>
+              </a>
             </div>
           </div>
         </div>

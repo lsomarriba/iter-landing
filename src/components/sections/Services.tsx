@@ -83,13 +83,14 @@ const Services: React.FC = () => {
                 </ul>
 
                 {/* CTA */}
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-iter-green group-hover:text-white group-hover:border-iter-green"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Solicitar Información
-                </Button>
+                <a href="#contact" className="block">
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-iter-green group-hover:text-white group-hover:border-iter-green"
+                  >
+                    Solicitar Información
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
@@ -104,13 +105,14 @@ const Services: React.FC = () => {
             <p className="text-lg mb-6 text-white/90">
               Contáctanos para una consulta gratuita y descubre cómo podemos ayudarte a optimizar tu consumo energético
             </p>
-            <Button 
-              variant="outline" 
-              className="bg-white text-iter-green border-white hover:bg-gray-100"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              📞 Agendar Consulta Gratuita
-            </Button>
+            <a href="#contact">
+              <Button 
+                variant="outline" 
+                className="bg-white text-iter-green border-white hover:bg-gray-100"
+              >
+                📞 Agendar Consulta Gratuita
+              </Button>
+            </a>
           </div>
         </div>
       </div>

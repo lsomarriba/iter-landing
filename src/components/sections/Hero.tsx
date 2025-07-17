@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Button from '@/components/ui/Button'
 
@@ -22,19 +24,16 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                🚀 Comenzar Ahora
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                📋 Ver Servicios
-              </Button>
+              <a href="#contact">
+                <Button size="lg">
+                  🚀 Comenzar Ahora
+                </Button>
+              </a>
+              <a href="#services">
+                <Button variant="outline" size="lg">
+                  📋 Ver Servicios
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

@@ -1,10 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 const Benefits: React.FC = () => {
-  const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null)
-
   const benefits = [
     {
       icon: '💰',
@@ -66,23 +64,10 @@ const Benefits: React.FC = () => {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <div 
-              key={index}
-              className="group cursor-pointer"
-              onMouseEnter={() => setHoveredBenefit(index)}
-              onMouseLeave={() => setHoveredBenefit(null)}
-            >
-              <div className={`bg-white rounded-2xl border-2 p-8 h-full transition-all duration-300 ${
-                hoveredBenefit === index 
-                  ? 'border-iter-green shadow-2xl transform -translate-y-2 bg-gradient-to-br from-iter-green/5 to-iter-blue/5' 
-                  : 'border-gray-100 shadow-lg hover:shadow-xl'
-              }`}>
+            <div key={index} className="group cursor-pointer">
+              <div className="bg-white rounded-2xl border-2 border-gray-100 p-8 h-full transition-all duration-300 hover:border-iter-green hover:shadow-2xl hover:-translate-y-2 hover:bg-gradient-to-br hover:from-iter-green/5 hover:to-iter-blue/5">
                 {/* Icon with animation */}
-                <div className={`w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-6 transition-all duration-300 ${
-                  hoveredBenefit === index 
-                    ? 'bg-gradient-to-r from-iter-green to-iter-blue text-white transform scale-110' 
-                    : 'bg-gray-100 group-hover:bg-gradient-to-r group-hover:from-iter-green group-hover:to-iter-blue group-hover:text-white'
-                }`}>
+                <div className="w-16 h-16 bg-gray-100 group-hover:bg-gradient-to-r group-hover:from-iter-green group-hover:to-iter-blue rounded-xl flex items-center justify-center text-3xl mb-6 transition-all duration-300 group-hover:text-white group-hover:scale-110">
                   {benefit.icon}
                 </div>
 
@@ -95,9 +80,7 @@ const Benefits: React.FC = () => {
                 </p>
 
                 {/* Stat */}
-                <div className={`transition-all duration-300 ${
-                  hoveredBenefit === index ? 'transform scale-105' : ''
-                }`}>
+                <div className="transition-all duration-300 group-hover:scale-105">
                   <div className="text-3xl font-bold text-iter-green mb-1">
                     {benefit.stat}
                   </div>
@@ -107,9 +90,7 @@ const Benefits: React.FC = () => {
                 </div>
 
                 {/* Hover indicator */}
-                <div className={`mt-6 h-1 bg-gradient-to-r from-iter-green to-iter-blue rounded-full transition-all duration-300 ${
-                  hoveredBenefit === index ? 'w-full' : 'w-0'
-                }`}></div>
+                <div className="mt-6 h-1 bg-gradient-to-r from-iter-green to-iter-blue rounded-full transition-all duration-300 w-0 group-hover:w-full"></div>
               </div>
             </div>
           ))}
@@ -145,12 +126,9 @@ const Benefits: React.FC = () => {
               </div>
             </div>
 
-            <button 
-              className="bg-gradient-to-r from-iter-green to-iter-blue hover:from-green-700 hover:to-blue-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <a href="#contact" className="inline-block bg-gradient-to-r from-iter-green to-iter-blue hover:from-green-700 hover:to-blue-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
               🚀 Solicita tu Consulta Gratuita
-            </button>
+            </a>
           </div>
         </div>
       </div>
