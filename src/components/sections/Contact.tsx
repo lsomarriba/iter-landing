@@ -405,7 +405,7 @@ Este mensaje fue enviado desde el formulario de contacto de ITER.
                   <div className="text-sm text-gray-400">Tiempo Respuesta</div>
                 </div>
                 <div className="group cursor-pointer">
-                  <div className="text-3xl font-black text-iter-secondary group-hover:scale-110 transition-transform">98%</div>
+                  <div className="text-3xl font-black text-iter-secondary group-hover:scale-110 transition-transform">Excelente</div>
                   <div className="text-sm text-gray-400">Satisfacción</div>
                 </div>
                 <div className="group cursor-pointer">

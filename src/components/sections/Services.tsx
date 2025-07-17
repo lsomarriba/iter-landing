@@ -7,7 +7,7 @@ const Services: React.FC = () => {
       icon: '🏭',
       title: 'Gestión Energética ISO 50001',
       subtitle: 'Certificación Internacional de Eficiencia',
-      description: 'Implementación completa del sistema de gestión energética más reconocido mundialmente. Reducimos hasta 40% tus costos energéticos con metodología probada.',
+      description: 'Implementación completa del sistema de gestión energética más reconocido mundialmente. Reduce significativamente tus costos energéticos con metodología probada.',
       detailedExplanation: 'La norma ISO 50001 es el estándar internacional para sistemas de gestión de la energía. Te ayudamos a establecer políticas, objetivos y procesos para mejorar el rendimiento energético de tu organización.',
       features: [
         {
@@ -27,7 +27,7 @@ const Services: React.FC = () => {
           description: 'Sistema de seguimiento permanente para garantizar resultados sostenidos'
         }
       ],
-      benefits: ['Reducción 30-40% costos energéticos', 'Certificación internacional', 'Mejora competitividad', 'Cumplimiento normativo'],
+      benefits: ['Reducción significativa costos energéticos', 'Certificación internacional', 'Mejora competitividad', 'Cumplimiento normativo'],
       timeline: '3-6 meses',
       investment: 'Cotización personalizada',
       color: 'from-iter-primary to-iter-secondary',
@@ -93,21 +93,21 @@ const Services: React.FC = () => {
       ],
       phasesBenefits: {
         design: [
-          'Evitar errores costosos (ahorro hasta $50,000)',
-          'Optimizar diseño (+15% producción)',
+          'Evitar errores costosos significativos',
+          'Optimizar diseño para máxima producción',
           'Validar ROI antes de invertir',
           'Cumplimiento normativo garantizado'
         ],
         execution: [
-          'Control calidad 100% componentes',
+          'Control de calidad total de componentes',
           'Instalación conforme especificaciones',
           'Prevenir problemas futuros',
           'Garantía técnica respaldada'
         ],
         operation: [
-          'Recuperar hasta 25% producción perdida',
-          'Extender vida útil +5 años',
-          'Reducir costos O&M 30%',
+          'Recuperar producción perdida significativa',
+          'Extender vida útil considerablemente',
+          'Reducir costos O&M sustancialmente',
           'Maximizar rentabilidad'
         ]
       },
@@ -353,7 +353,7 @@ const Services: React.FC = () => {
                                     {/* Benefits preview */}
                                     <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                       <div className="text-xs text-iter-secondary font-medium">• Evitar errores costosos</div>
-                                      <div className="text-xs text-iter-secondary font-medium">• +15% optimización</div>
+                                      <div className="text-xs text-iter-secondary font-medium">• Máxima optimización</div>
                                     </div>
 
                                     {/* CTA Button */}
@@ -388,7 +388,7 @@ const Services: React.FC = () => {
                                     
                                     {/* Benefits preview */}
                                     <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                      <div className="text-xs text-iter-gold font-medium">• Control calidad 100%</div>
+                                      <div className="text-xs text-iter-gold font-medium">• Control calidad total</div>
                                       <div className="text-xs text-iter-gold font-medium">• Prevenir problemas</div>
                                     </div>
 
@@ -424,8 +424,8 @@ const Services: React.FC = () => {
                                     
                                     {/* Benefits preview */}
                                     <div className="space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                      <div className="text-xs text-iter-primary font-medium">• +25% producción</div>
-                                      <div className="text-xs text-iter-primary font-medium">• +5 años vida útil</div>
+                                      <div className="text-xs text-iter-primary font-medium">• Máxima producción</div>
+                                      <div className="text-xs text-iter-primary font-medium">• Mayor vida útil</div>
                                     </div>
 
                                     {/* CTA Button */}

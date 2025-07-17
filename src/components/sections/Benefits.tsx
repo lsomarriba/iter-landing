@@ -7,44 +7,44 @@ const Benefits: React.FC = () => {
     {
       icon: '💰',
       title: 'Reducción de Costos',
-      description: 'Ahorra hasta un 40% en tu factura energética con nuestras soluciones optimizadas.',
-      stat: '40%',
-      statLabel: 'Ahorro promedio'
+      description: 'Reduce significativamente tu factura energética con nuestras soluciones optimizadas.',
+      stat: 'Descúbrelo',
+      statLabel: 'Solicita cotización'
     },
     {
       icon: '🌱',
       title: 'Sostenibilidad',
       description: 'Reduce tu huella de carbono y mejora la imagen corporativa de tu empresa.',
-      stat: '60%',
-      statLabel: 'Menos emisiones'
+      stat: 'Impacto',
+      statLabel: 'Positivo garantizado'
     },
     {
       icon: '⚡',
       title: 'Eficiencia Operacional',
       description: 'Optimiza procesos industriales y mejora la productividad energética.',
-      stat: '25%',
-      statLabel: 'Más eficiencia'
+      stat: 'Consulta',
+      statLabel: 'Tu potencial'
     },
     {
       icon: '📈',
       title: 'ROI Garantizado',
       description: 'Retorno de inversión comprobado en proyectos de eficiencia energética.',
-      stat: '18 meses',
-      statLabel: 'Payback promedio'
+      stat: 'Evalúa',
+      statLabel: 'Tu caso específico'
     },
     {
       icon: '🏆',
       title: 'Certificaciones',
       description: 'Obtén certificaciones ISO 50001 que valorizan tu empresa.',
-      stat: '100%',
-      statLabel: 'Éxito certificación'
+      stat: 'Certifícate',
+      statLabel: 'Con nosotros'
     },
     {
       icon: '🔧',
       title: 'Soporte Técnico',
       description: 'Acompañamiento continuo con monitoreo y mantenimiento especializado.',
-      stat: '24/7',
-      statLabel: 'Soporte disponible'
+      stat: 'Contáctanos',
+      statLabel: 'Soporte experto'
     }
   ]
 

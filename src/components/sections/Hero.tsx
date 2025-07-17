@@ -90,8 +90,8 @@ const Hero: React.FC = () => {
                 <div className="text-sm text-gray-400 uppercase tracking-wide">Proyectos</div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-4xl font-black text-iter-gold group-hover:scale-110 transition-transform">40%</div>
-                <div className="text-sm text-gray-400 uppercase tracking-wide">Ahorro Promedio</div>
+                <div className="text-4xl font-black text-iter-gold group-hover:scale-110 transition-transform">Consulta</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Tu Potencial</div>
               </div>
               <div className="text-center group cursor-pointer">
                 <div className="text-4xl font-black text-iter-primary group-hover:scale-110 transition-transform">ISO</div>

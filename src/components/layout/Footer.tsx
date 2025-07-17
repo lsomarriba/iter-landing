@@ -158,15 +158,15 @@ const Footer: React.FC = () => {
                 <div className="text-xs text-gray-400 uppercase tracking-wide">Proyectos</div>
               </div>
               <div className="group cursor-pointer">
-                <div className="text-2xl font-bold text-iter-gold group-hover:scale-110 transition-transform">40%</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">Ahorro</div>
+                <div className="text-2xl font-bold text-iter-gold group-hover:scale-110 transition-transform">Consulta</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">Tu Potencial</div>
               </div>
               <div className="group cursor-pointer">
                 <div className="text-2xl font-bold text-iter-secondary group-hover:scale-110 transition-transform">15+</div>
                 <div className="text-xs text-gray-400 uppercase tracking-wide">Años</div>
               </div>
               <div className="group cursor-pointer">
-                <div className="text-2xl font-bold text-iter-primary group-hover:scale-110 transition-transform">98%</div>
+                <div className="text-2xl font-bold text-iter-primary group-hover:scale-110 transition-transform">Excelente</div>
                 <div className="text-xs text-gray-400 uppercase tracking-wide">Satisfacción</div>
               </div>
             </div>

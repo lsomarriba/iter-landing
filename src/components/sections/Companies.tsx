@@ -15,19 +15,19 @@ const Companies: React.FC = () => {
       name: "Ferrero del Ecuador",
       project: "Programa de Eficiencia Energética",
       description: "Implementación integral del programa de eficiencia energética e ISO 50001, logrando ahorros significativos en consumo.",
-      results: ["20% ahorro energético", "ISO 50001", "ROI en 2 años"],
+      results: ["Ahorro energético significativo", "ISO 50001", "ROI acelerado"],
       sector: "Manufactura",
       logo: "🍫",
-      highlight: "20% de ahorro energético anual"
+      highlight: "Ahorro energético anual comprobado"
     },
     {
       name: "EEQ (Empresa Eléctrica Quito)",
       project: "Gestión Energética Integral",
-      description: "Con una sola oportunidad de gestión logramos ahorrar el 20% anual en consumo energético de la empresa eléctrica.",
-      results: ["20% ahorro anual", "Gestión optimizada", "Eficiencia operativa"],
+      description: "Con una sola oportunidad de gestión logramos generar ahorros significativos anuales en consumo energético de la empresa eléctrica.",
+      results: ["Ahorro anual sustancial", "Gestión optimizada", "Eficiencia operativa"],
       sector: "Servicios Públicos",
       logo: "⚡",
-      highlight: "20% ahorro con una sola gestión"
+      highlight: "Ahorro significativo con una sola gestión"
     },
     {
       name: "Bioalimentar",
@@ -42,7 +42,7 @@ const Companies: React.FC = () => {
       name: "FV Andina Planta Grifería",
       project: "Sistema Fotovoltaico Industrial",
       description: "Diseño e implementación de sistema fotovoltaico para reducir costos energéticos en planta de manufactura.",
-      results: ["Sistema FV 500kW", "40% reducción costos", "ROI 4 años"],
+      results: ["Sistema FV 500kW", "Reducción significativa costos", "ROI acelerado"],
       sector: "Manufactura Industrial",
       logo: "☀️",
       highlight: "500kW instalados exitosamente"
@@ -60,9 +60,9 @@ const Companies: React.FC = () => {
 
   const stats = [
     { number: "200+", label: "Proyectos Completados", icon: "📊" },
-    { number: "40%", label: "Ahorro Promedio", icon: "💰" },
+    { number: "Consulta", label: "Tu Potencial", icon: "💰" },
     { number: "15+", label: "Años de Experiencia", icon: "⭐" },
-    { number: "98%", label: "Satisfacción Cliente", icon: "❤️" }
+    { number: "Excelente", label: "Satisfacción Cliente", icon: "❤️" }
   ]
 
   return (
@@ -188,7 +188,7 @@ const Companies: React.FC = () => {
               &ldquo;Con ITER logramos <span className="text-iter-gold">resultados excepcionales</span>&rdquo;
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Nuestros clientes han conseguido <strong className="text-iter-primary">ahorros del 20-40%</strong> en 
+              Nuestros clientes han conseguido <strong className="text-iter-primary">ahorros significativos</strong> en 
               sus costos energéticos, <strong className="text-iter-gold">certificaciones internacionales</strong> y 
               <strong className="text-iter-secondary"> ROI garantizado</strong> en sus inversiones.
             </p>
