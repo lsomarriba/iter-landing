@@ -12,7 +12,14 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-iter-black">ITER</h1>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/iter-logo.png" 
+                alt="ITER - Gestión Energética" 
+                className="h-10 w-auto"
+              />
+              <h1 className="text-2xl font-bold text-iter-dark hidden sm:block">ITER</h1>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

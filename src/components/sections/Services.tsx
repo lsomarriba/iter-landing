@@ -29,7 +29,7 @@ const Services: React.FC = () => {
       ],
       benefits: ['Reducción 30-40% costos energéticos', 'Certificación internacional', 'Mejora competitividad', 'Cumplimiento normativo'],
       timeline: '3-6 meses',
-      investment: 'Desde $15,000',
+      investment: 'Cotización personalizada',
       color: 'from-iter-primary to-iter-secondary',
       borderColor: 'border-iter-primary',
       ctaText: 'Solicitar Diagnóstico ISO 50001'
@@ -200,22 +200,22 @@ const Services: React.FC = () => {
                   </div>
 
                   {/* Información clave */}
-                  <div className="grid grid-cols-3 gap-4 mt-8 p-6 bg-gray-50 rounded-2xl">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 p-6 bg-gray-50 rounded-2xl">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-iter-primary">
+                      <div className="text-xl md:text-2xl font-bold text-iter-primary mb-1">
                         {service.timeline}
                       </div>
-                      <div className="text-sm text-gray-600">Duración</div>
+                      <div className="text-xs md:text-sm text-gray-600">Duración</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-iter-gold">
+                      <div className="text-sm md:text-lg font-bold text-iter-gold mb-1 leading-tight">
                         {service.investment}
                       </div>
-                      <div className="text-sm text-gray-600">Inversión</div>
+                      <div className="text-xs md:text-sm text-gray-600">Inversión</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-iter-secondary">ROI</div>
-                      <div className="text-sm text-gray-600">Garantizado</div>
+                      <div className="text-xl md:text-2xl font-bold text-iter-secondary mb-1">ROI</div>
+                      <div className="text-xs md:text-sm text-gray-600">Garantizado</div>
                     </div>
                   </div>
 
