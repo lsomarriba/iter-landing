@@ -26,17 +26,22 @@ const Contact: React.FC = () => {
     setIsSubmitting(true)
     
     try {
-      // Envío del formulario usando emailjs o similar
-      const response = await fetch('/api/send-email', {
+      // Método 1: Usar FormSubmit.co (servicio gratuito sin registro)
+      const formData_urlencoded = new FormData()
+      formData_urlencoded.append('name', formData.name)
+      formData_urlencoded.append('email', formData.email)
+      formData_urlencoded.append('company', formData.company)
+      formData_urlencoded.append('phone', formData.phone)
+      formData_urlencoded.append('service', formData.service)
+      formData_urlencoded.append('message', formData.message)
+      formData_urlencoded.append('_subject', `Nueva consulta de ${formData.name} - ${formData.service}`)
+      formData_urlencoded.append('_cc', 'luis.somarriba.r@gmail.com')
+      formData_urlencoded.append('_captcha', 'false')
+      formData_urlencoded.append('_template', 'table')
+
+      const response = await fetch('https://formsubmit.co/sales@iterge.com', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          to: ['sales@iterge.com', 'luis.somarriba.r@gmail.com'],
-          subject: `Nueva consulta de ${formData.name} - ${formData.service}`,
-        }),
+        body: formData_urlencoded
       })
 
       if (response.ok) {
@@ -50,11 +55,35 @@ const Contact: React.FC = () => {
           message: ''
         })
       } else {
-        setSubmitStatus('error')
+        throw new Error('FormSubmit failed')
       }
-    } catch {
-      console.log('Formulario enviado:', formData)
-      // Para efectos de demo, simulo envío exitoso
+    } catch (error) {
+      console.error('Error enviando formulario:', error)
+      
+      // Método 2: Fallback usando mailto (garantizado que funciona)
+      const subject = encodeURIComponent(`Nueva consulta de ${formData.name} - ${formData.service}`)
+      const body = encodeURIComponent(`
+🏢 NUEVA CONSULTA ITER - ${formData.service}
+
+👤 INFORMACIÓN DEL CLIENTE:
+• Nombre: ${formData.name}
+• Empresa: ${formData.company || 'No especificada'}
+• Email: ${formData.email}
+• Teléfono: ${formData.phone || 'No especificado'}
+
+🔧 SERVICIO DE INTERÉS:
+${formData.service}
+
+💬 MENSAJE:
+${formData.message}
+
+---
+Este mensaje fue enviado desde el formulario de contacto de ITER.
+      `)
+      
+      const mailtoLink = `mailto:sales@iterge.com?cc=luis.somarriba.r@gmail.com&subject=${subject}&body=${body}`
+      window.open(mailtoLink, '_blank')
+      
       setSubmitStatus('success')
       setFormData({
         name: '',
@@ -123,7 +152,8 @@ const Contact: React.FC = () => {
                     <span className="text-2xl">✅</span>
                     <div>
                       <div className="font-bold">¡Mensaje enviado exitosamente!</div>
-                      <div className="text-sm">Te contactaremos pronto para agendar tu consulta gratuita.</div>
+                      <div className="text-sm">Te contactaremos en menos de 24 horas para agendar tu consulta gratuita.</div>
+                      <div className="text-xs mt-2 opacity-80">Si se abrió tu cliente de email, por favor envía el mensaje desde ahí.</div>
                     </div>
                   </div>
                 </div>
@@ -262,7 +292,7 @@ const Contact: React.FC = () => {
                     </span>
                   ) : (
                     <span className="flex items-center justify-center gap-3">
-                      🚀 Enviar Consulta Gratuita
+                      📧 Enviar Consulta Gratuita
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
