@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'iter-green': '#00A859',
+        'iter-blue': '#004C97',
+        'iter-black': '#111111',
       },
     },
   },
