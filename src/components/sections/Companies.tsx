@@ -36,7 +36,7 @@ const Companies: React.FC = () => {
       results: ["Procesos optimizados", "Costos reducidos", "Sostenibilidad"],
       sector: "Biotecnología",
       logo: "🧬",
-      highlight: "Procesos 100% optimizados"
+      highlight: "Procesos completamente optimizados"
     },
     {
       name: "FV Andina Planta Grifería",

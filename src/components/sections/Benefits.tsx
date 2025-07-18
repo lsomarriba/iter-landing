@@ -117,7 +117,7 @@ const Benefits: React.FC = () => {
                 <div className="text-sm text-gray-600">Años de Experiencia</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-iter-green">98%</div>
+                <div className="text-2xl font-bold text-iter-green">Excelente</div>
                 <div className="text-sm text-gray-600">Satisfacción Cliente</div>
               </div>
               <div className="text-center">
